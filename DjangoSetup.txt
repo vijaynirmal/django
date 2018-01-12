@@ -1,0 +1,75 @@
+Source: https://kirr.co/6r8wr9
+
+System Setup
+Mac
+https://www.youtube.com/watch?v=FshRArXrEcM
+Windows
+https://www.youtube.com/playlist?list=PLEsfXFp6DpzSH9ylikCRyki_Bi6avmltQ
+
+
+
+Python -> Installed
+pip -> Installed
+
+set http_proxy="http://vijaynirmal.j:Oldalfer86@10.87.21.34:80"
+set https_proxy="https://vijaynirmal.j:Oldalfer86@10.87.21.35:80"
+
+pip install -–proxy="http://vijaynirmal.j:Oldalfer86@10.87.21.34:80" virtualenv
+
+Create a folder
+
+Powershell -> 
+mkdir foldername
+cd foldername
+	
+mkdir cfehome                =========> cfehome will be the name of the project
+cd foldername
+
+virtualenv .
+
+Once Inside virtualenv:
+
+Activate the virtualenvironment:
+
+ls
+
+./Scripts/activate     ======  or deactivate using deactivate
+
+pip install -–proxy="http://vijaynirmal.j:Oldalfer86@10.87.21.34:80" Django 
+
+or specify version
+
+pip install -–proxy="http://vijaynirmal.j:Oldalfer86@10.87.21.34:80" Django-2.0.1
+
+were using python 3.6.2 and django 2.0.1
+
+check if properly installed -> pip freeze
+
+Open the project in an editor such as pyCharm
+
+navigate inside the VirtualEnv(activated)
+
+mkdir src
+
+cd src
+
+django-admin startproject cfehome .          ==========> notice that files appear inside src
+
+Create New Admin User :
+
+python manage.py createsuperuser
+
+Run default server :
+
+python manage.py runserver <portNumber>
+
+Example : python manage.py runserver 8889
+
+Message  ================> Starting development server at http://127.0.0.1:8889/
+
+
+View sample application at http://127.0.0.1:8000/
+
+cd out of src
+
+deactivate    ======> deactivate the virtual environment

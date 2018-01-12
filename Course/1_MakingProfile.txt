@@ -1,0 +1,42 @@
+creatre a new project called seven
+install Django etc just like we did for cfehome
+
+create a feature :
+
+python manage.py startproject profiles       ( note profiles is not followed by . )
+
+Inside profiles edit models:
+
+Example :
+
+class Profile(models.Model) :
+    name = models.CharField(max_length=120)
+    description = models.TextField(default="my_description")
+
+    def __unicode__(self):
+        return self.name
+
+Save and Edit settings.py inside seven :
+
+Append with newly created profiles:
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'profiles',
+]
+
+Migrate changes to DB :
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+
+View Migrations :
+
+view migrations under migrations folder
